@@ -1,10 +1,12 @@
 import Card from "../CardComponent";
 import { globalDataContext } from "../../pages/_app";
 import { useContext } from "react";
+import { useRouter } from "next/router";
 
 export default function ArtPiecesPage() {
   const state = useContext(globalDataContext);
   console.log(state);
+
   return (
     <>
       <h1>Pieces</h1>

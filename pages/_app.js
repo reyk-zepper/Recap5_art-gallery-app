@@ -3,6 +3,7 @@ import useSWR from "swr";
 import ArtPiecesPage from "../components/ArtPieces";
 import { createContext } from "react";
 import PickRandomPiece from "../lib/hooks/utils.js";
+import Layout from "../components/Layout";
 
 export const globalDataContext = createContext();
 
@@ -34,6 +35,7 @@ export default function App({ Component, pageProps }) {
   return (
     <globalDataContext.Provider value={pieces}>
       <GlobalStyle />
+      <Layout />
       <Component {...pageProps} />
     </globalDataContext.Provider>
   );
