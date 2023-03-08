@@ -11,11 +11,12 @@ export default function Spotlight() {
   const { title, artist, imageSource, name } = randomArray;
   return (
     <>
-      <h2>🖼️ Spotlight {title}</h2>
+      <h2>Spotlight</h2>
       <div>
-        <p>{name}</p>
-        <Image src={imageSource} alt={title} width={500} height={500} />
-        <p>{title}</p>
+        <p>
+          <strong>{name}</strong>
+        </p>
+        <Image src={imageSource} alt={name} width={500} height={500} />
         <p>{artist}</p>
       </div>
     </>
