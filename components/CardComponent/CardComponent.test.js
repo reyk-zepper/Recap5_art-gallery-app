@@ -2,9 +2,9 @@ import { render } from "@testing-library/react";
 import Card from "./index";
 
 describe("Card component", () => {
-  const pieceName = "Starry Night";
+  const pieceName = "Orange Red and Green Abstract Painting";
   const pieceImg = "";
-  const artistName = "Vincent van Gogh";
+  const artistName = "Steve Johnson";
 
   it("should render piece name, image and artist name", () => {
     const { getByText, getByAltText } = render(

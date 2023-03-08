@@ -1,0 +1,1 @@
+GET https://example-apis.vercel.app/api/art HTTP/1.1
