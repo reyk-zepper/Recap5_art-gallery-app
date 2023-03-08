@@ -1,11 +1,15 @@
 import Card from "../CardComponent";
+import { globalDataContext } from "../../pages/_app";
+import { useContext } from "react";
 
-export default function ArtPiecesPage({ data }) {
+export default function ArtPiecesPage() {
+  const state = useContext(globalDataContext);
+  console.log(state);
   return (
     <>
       <h1>Pieces</h1>
       <div>
-        {data.map((artwork) => {
+        {state.map((artwork) => {
           return (
             <li key={artwork.slug}>
               <Card
