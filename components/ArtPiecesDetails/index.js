@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function ArtPieceDetails({ image, title, artist, year, genre }) {
   const router = useRouter();
   function handleButtonBack() {
-    router.push("../art-pieces");
+    router.push("../ArtPieces");
   }
   return (
     <>
