@@ -7,13 +7,21 @@ export default function ArtPiecesPage() {
   const state = useContext(globalDataContext);
   console.log(state);
 
+  const router = useRouter();
+  function handleArtPieceClick(slug) {
+    router.push(`../ArtPieces/${slug}`);
+  }
+
   return (
     <>
       <h1>Pieces</h1>
       <div>
         {state.map((artwork) => {
           return (
-            <li key={artwork.slug}>
+            <li
+              key={artwork.slug}
+              onClick={() => handleArtPieceClick(artwork.slug)}
+            >
               <Card
                 pieceName={artwork.name}
                 pieceImg={artwork.imageSource}
